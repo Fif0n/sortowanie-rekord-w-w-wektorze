@@ -2,8 +2,6 @@
 #include <vector>
 #include <fstream>
 #include <cstdlib>
-#include<ctime>
-#include<algorithm>
 
 using namespace std;
 
@@ -27,7 +25,7 @@ class ranking{
 
 ranking::ranking(){
 	plik1.open("c:\\od.txt");
-    plik2.open("c:\\do.txt");
+    	plik2.open("c:\\do.txt");
 }
 
 	int compare(const void *a, const void *b){
@@ -40,9 +38,7 @@ void ranking::wprowadz(){
 		plik1>>wprowadzany.imie>>wprowadzany.nazwisko>>wprowadzany.miejsce;
 		
 		spis.push_back(wprowadzany);
-		
 	}
-	
 	
 }
 
@@ -54,8 +50,7 @@ void ranking::sortuj(){
 
     }
     plik2<<"]";
-	
-		
+			
 }
 
 ranking::~ranking(){
@@ -68,7 +63,6 @@ int main(int argc, char** argv) {
         ranking r1;
         r1.wprowadz();
         r1.sortuj();
-
-        
+	
         return 0;
 }
